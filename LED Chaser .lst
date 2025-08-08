@@ -1,0 +1,17 @@
+  1 | 0000: 0a11                LDIs  R1,1             ; 0x1
+  4 | 0001: 3f01      up_loop:  OUTs  0,R1             ; 0x0
+  5 | 0002: 0000                NOP   
+  6 | 0003: 0000                NOP   
+  7 | 0004: 0000                NOP   
+  8 | 0005: 2410                LSL   R1
+  9 | 0006: 8000 2011           CPI   R1,32768         ; 0x8000
+ 10 | 0008: 38f8                BRNE  up_loop          ; 0x1
+                      down_loop:
+ 13 | 0009: 3f01                OUTs  0,R1             ; 0x0
+ 14 | 000a: 0000                NOP   
+ 15 | 000b: 0000                NOP   
+ 16 | 000c: 0000                NOP   
+ 17 | 000d: 2510                LSR   R1
+ 18 | 000e: 2111                CPIs  R1,1             ; 0x1
+ 19 | 000f: 38f9                BRNE  down_loop        ; 0x9
+ 21 | 0010: 3df0                JMPs  up_loop          ; 0x1
