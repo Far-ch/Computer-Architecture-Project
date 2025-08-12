@@ -1,2 +1,2 @@
-# Computer-Architecture-Project
-This is a project  for Computer Architecture Course at Sharif University of Technology , Summer 2025.
+# Computer-Structure-Project
+This is a project  for Computer Structuree Course at Sharif University of Technology , Summer 2025.
